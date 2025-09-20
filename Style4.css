@@ -1,15 +1,14 @@
 :root{
-  --azul:#004080;      /* header/nav */
-  --celeste:#00bfff;   /* botones/detalles */
-  --borde:#0077cc;     /* bordes/cards */
-  --texto:#003366;     /* texto principal */
-  --fondo:#f0f8ff;     /* fondos claros */
-  --ide-min-h: 820px;  /* altura mínima para el editor */
-  /* Nuevos tokens para alinearlo a index1 */
-  --bg:#ffffff;        /* fondo base */
-  --radius:16px;       /* radios suaves */
+  --azul:#004080;
+  --celeste:#00bfff;
+  --borde:#0077cc;
+  --texto:#003366;
+  --fondo:#f0f8ff;
+  --ide-min-h: 820px;
+  --bg:#ffffff;
+  --radius:16px;
   --shadow:0 8px 24px rgba(0,64,128,.14);
-  --header-h:72px;     /* alto del header sticky */
+  --header-h:72px;
 }
 
 *{box-sizing:border-box}
@@ -26,7 +25,6 @@ a{color:inherit;text-decoration:none}
 .container{width:min(1100px,92%);margin-inline:auto}
 .section{padding:72px 0;}
 
-/* ===== Header (sticky + gradiente, como index1) ===== */
 .site-header{position:sticky;top:0;z-index:50; 
   background:linear-gradient(90deg,var(--azul),var(--celeste));
   color:#fff; box-shadow:var(--shadow);
@@ -36,7 +34,6 @@ a{color:inherit;text-decoration:none}
 .brand__logo{width:40px;height:40px;border-radius:10px;object-fit:cover;background:#fff;padding:3px}
 .brand__name{font-weight:800;letter-spacing:.3px;font-size:1.1rem}
 
-/* ===== Nav (píldoras con contorno) ===== */
 .nav-toggle{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:10px;border-radius:10px}
 .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .nav-toggle__bar{display:block;width:24px;height:2px;background:#fff;margin:5px 0}
@@ -55,18 +52,15 @@ a{color:inherit;text-decoration:none}
   .nav-link{padding:14px 12px;border-radius:12px}
 }
 
-/* ===== Hero (suave y legible) ===== */
 .hero{background:linear-gradient(180deg, rgba(0,191,255,.12), transparent)}
 .hero .container{color:var(--texto)}
 .hero h1{margin:0 0 .5rem;font-size:clamp(1.6rem,1.2rem + 2vw,2.2rem);color:var(--azul)}
 
-/* Botón primario con contorno consistente */
 .btn-primario{display:inline-block;margin-top:10px;background:#fff;color:var(--azul);padding:10px 16px;border-radius:12px;font-weight:800;border:2px solid var(--azul);box-shadow:0 4px 12px rgba(0,191,255,.18);transition:background .18s ease, transform .08s ease, box-shadow .18s ease}
 .btn-primario:hover{background:#eef7ff;box-shadow:0 6px 16px rgba(0,191,255,.25)}
 .btn-primario:active{transform:translateY(1px)}
 .btn-primario:focus-visible{outline:0;box-shadow:0 0 0 3px rgba(0,191,255,.35)}
 
-/* ===== Card IDE (alineada a index1) ===== */
 .card{background:#fff;border:1px solid var(--borde);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
 .card__header{padding:16px;border-bottom:1px solid var(--fondo)}
 .card__header h2{margin:0;color:var(--azul)}
@@ -74,7 +68,6 @@ a{color:inherit;text-decoration:none}
 .ide-embed{padding:12px;background:var(--fondo);min-height:var(--ide-min-h)}
 .ide-embed iframe{min-height:var(--ide-min-h);width:100%;border:0;border-radius:12px}
 
-/* ===== Contacto (cards con contorno) ===== */
 .contact-card{background:#fff;border:1px solid var(--borde);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
 .contact-card__header h2{margin:.2rem 0;color:var(--azul)}
 .contact-card__sub{margin:0;color:#5b728a}
@@ -83,15 +76,12 @@ a{color:inherit;text-decoration:none}
 .contact-item:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--borde)}
 .icon-sm{width:18px;height:18px;fill:currentColor;opacity:.9}
 
-/* ===== Footer ===== */
 .site-footer{background:#fff;border-top:1px solid var(--borde)}
 .site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:18px 0}
 .site-footer .to-top{color:var(--azul);text-decoration:underline;font-weight:700}
 
-/* ===== Utilidades ===== */
 .muted{opacity:.9}
 
-/* ===== Responsive ===== */
 @media (max-width:640px){
   :root{--header-h:64px}
   .section{padding:56px 0}

@@ -1,7 +1,7 @@
 :root {
-  --azul: #0d47a1;      /* azul principal */
-  --celeste: #03a9f4;   /* celeste de apoyo */
-  --blanco: #ffffff;    /* blanco */
+  --azul: #0d47a1;
+  --celeste: #03a9f4;
+  --blanco: #ffffff;
   --gris-100: #f5f7fb;
   --gris-200: #e9eef6;
   --gris-700: #344053;
@@ -17,7 +17,6 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #f3f9ff 100%);
 }
 
-/* Encabezado */
 .site-header {
   position: sticky;
   top: 0;
@@ -46,19 +45,17 @@ body {
 }
 .menu-toggle:active { transform: scale(0.98); }
 
-/* Layout general */
 .layout {
   display: grid;
   grid-template-columns: 280px 1fr;
   min-height: calc(100vh - 64px);
 }
 
-/* Barra lateral */
 .sidebar {
-  position: sticky; /* se mantiene visible al hacer scroll */
-  top: 64px;        /* altura aproximada del header */
+  position: sticky;
+  top: 64px;
   height: calc(100vh - 64px);
-  overflow-y: auto; /* desplazable */
+  overflow-y: auto;
   background: var(--blanco);
   border-right: 1px solid var(--gris-200);
   padding: 1rem;
@@ -79,7 +76,6 @@ body {
 .sidebar-extra { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--gris-200); font-size: .95rem; }
 .sidebar h3 { margin: .25rem 0 .5rem; color: var(--azul); }
 
-/* Contenido */
 .content { padding: 1.25rem 1.25rem 3rem; }
 .section { max-width: 960px; margin: 0 auto 2rem; background: var(--blanco); border: 1px solid var(--gris-200); border-radius: 16px; padding: 1.25rem; box-shadow: 0 6px 20px rgba(13,71,161,.06); }
 .section h1, .section h2 { color: var(--azul); margin-top: 0; }
@@ -115,7 +111,6 @@ body {
 .contact a { color: var(--azul); text-decoration: none; }
 .contact a:hover { text-decoration: underline; }
 
-/* Responsivo */
 @media (max-width: 960px) {
   .bio { grid-template-columns: 1fr; }
 }
@@ -160,7 +155,6 @@ body {
 }
 .btn-outline:hover { background: #dff1ff; }
 
-/* Ajustes del header para alojar el botón */
 .site-header { gap: .75rem; }
 .site-header .btn { order: 2; }
 .menu-toggle { order: 3; }

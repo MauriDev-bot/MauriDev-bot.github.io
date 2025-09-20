@@ -1,11 +1,10 @@
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 
-// Estado
-let boardState = Array(9).fill(null); // 'X' | 'O' | null
+let boardState = Array(9).fill(null);
 let current = 'X';
 let winner = null;
-let aiEnabled = true; // siempre hay IA, el humano es X
+let aiEnabled = true;
 
 const winSets = [
   [0,1,2],[3,4,5],[6,7,8],
@@ -13,7 +12,6 @@ const winSets = [
   [0,4,8],[2,4,6]
 ];
 
-// DOM
 const boardEl = $('#board');
 const statusEl = $('#status');
 const resetBtn = $('#resetBtn');
@@ -22,7 +20,6 @@ const difficultySel = $('#difficulty');
 const aiFirstToggle = $('#aiFirst');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Construcción del tablero
 function buildBoard() {
   boardEl.innerHTML = '';
   for (let i = 0; i < 9; i++) {
@@ -78,12 +75,10 @@ function setBoardDisabled(disabled) {
   });
 }
 
-// --- IA ---
 function aiTurn() {
   setBoardDisabled(true);
   setStatus('Pensando...');
   const diff = difficultySel.value;
-  // pequeño retardo para UX
   setTimeout(() => {
     let idx;
     if (diff === 'easy') idx = aiEasy();
@@ -97,21 +92,16 @@ function aiTurn() {
   }, 250);
 }
 
-// Fácil: jugada aleatoria
 function aiEasy() {
   const empties = getEmptyIndices();
   return empties[Math.floor(Math.random() * empties.length)] ?? null;
 }
 
-// Medio: gana si puede, si no, bloquea; si no, centro > esquinas > laterales
 function aiMedium() {
-  // 1) ganar si es posible
   const winIdx = findWinningMove('O', boardState);
   if (winIdx != null) return winIdx;
-  // 2) bloquear si el humano gana
   const blockIdx = findWinningMove('X', boardState);
   if (blockIdx != null) return blockIdx;
-  // 3) priorizar centro, esquinas, laterales
   const order = [4,0,2,6,8,1,3,5,7];
   for (const i of order) if (!boardState[i]) return i;
   return null;
@@ -129,7 +119,6 @@ function findWinningMove(player, state) {
   return null;
 }
 
-// Difícil: Minimax con poda alfa-beta
 function aiHard() {
   const best = minimax(boardState, 'O', -Infinity, Infinity);
   return best.index;
@@ -150,14 +139,14 @@ function minimax(state, player, alpha, beta) {
     state[idx] = null;
 
     const score = result.score;
-    if (player === 'O') { // maximiza
+    if (player === 'O') {
       if (score > bestMove.score) { bestMove = { index: idx, score }; }
       alpha = Math.max(alpha, score);
-    } else { // minimiza
+    } else {
       if (score < bestMove.score) { bestMove = { index: idx, score }; }
       beta = Math.min(beta, score);
     }
-    if (beta <= alpha) break; // poda
+    if (beta <= alpha) break;
   }
   return bestMove;
 }
@@ -178,10 +167,9 @@ function resetGame() {
 resetBtn.addEventListener('click', resetGame);
 
 difficultySel.addEventListener('change', () => {
-  // No reiniciamos automáticamente para no perder partidas; solo actualizamos estado
   statusEl.textContent += '  •  Dificultad: ' + difficultySel.options[difficultySel.selectedIndex].text;
 });
 
-// Init
 buildBoard();
+
 resetGame();

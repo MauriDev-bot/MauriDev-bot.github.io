@@ -1,0 +1,93 @@
+:root {
+  --azul: #0d47a1;
+  --celeste: #4fc3f7;
+  --blanco: #ffffff;
+  --texto: #0f172a;
+  --bg: #f8fafc;
+  --gris: #eef3f7;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(13, 71, 161, 0.12);
+  --header-h: 72px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--texto);
+  background: var(--bg);
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1100px, 92%); margin-inline: auto; }
+
+/* ===== Header (alineado a index1) ===== */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: linear-gradient(90deg, var(--azul), var(--celeste));
+  color: var(--blanco);
+  box-shadow: var(--shadow);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
+.brand { display: inline-flex; align-items: center; gap: 12px; margin: 0; font-weight: 800; letter-spacing: .3px; font-size: clamp(20px, 3.6vw, 36px); }
+.brand span { color: #e3f2fd; font-weight: 900; }
+
+.site-nav { display: flex; align-items: center; }
+.nav-list { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav-link { padding: 10px 14px; border-radius: 999px; transition: background-color .2s ease, color .2s ease, box-shadow .2s ease; color: var(--blanco); border: 1.5px solid rgba(255,255,255,.35); }
+.nav-link:hover { background: rgba(255,255,255,0.15); box-shadow: 0 0 0 2px rgba(255,255,255,.25) inset; }
+.nav-link.is-active { background: var(--blanco); color: var(--azul); border-color: transparent; }
+
+/* ===== Sección tarjeta del juego ===== */
+.game-card { background: var(--blanco); border: 1px solid #e6eaf0; border-radius: var(--radius); padding: 24px; margin: 28px auto 40px; box-shadow: var(--shadow); }
+.game-card h2 { margin: 0 0 6px; font-size: clamp(18px, 3.6vw, 28px); color: var(--azul); }
+.subtitle { margin: 0 0 16px; color: #35506e; }
+
+/* ===== Controles ===== */
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 6px 0 12px; }
+.controls label { font-weight: 600; color: var(--azul); }
+.controls select { padding: 10px 12px; border-radius: 12px; border: 2px solid #cfe3ff; background: #f6fbff; font-weight: 600; color: #083b86; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; }
+
+/* ===== Tablero ===== */
+.board { width: min(420px, 92vw); aspect-ratio: 1 / 1; margin: 10px auto 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cell { background: #f5f9ff; border: 2px solid #cfe3ff; border-radius: 12px; display: grid; place-items: center; font-size: clamp(36px, 10vw, 64px); font-weight: 800; cursor: pointer; user-select: none; transition: transform .06s ease, box-shadow .15s ease, background .2s ease, border-color .2s ease; }
+.cell:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(3, 169, 244, 0.25); }
+.cell.taken { background: #e9f2ff; border-color: #b8d5ff; cursor: default; }
+.cell.x { color: var(--azul); }
+.cell.o { color: var(--celeste); }
+.cell.disabled { pointer-events: none; opacity: .7; }
+
+/* ===== Panel & Estado ===== */
+.panel { display: flex; gap: 12px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.status { font-weight: 700; color: var(--azul); }
+
+/* ===== Botones con contorno ===== */
+.btn {
+  appearance: none;
+  padding: 10px 14px; font-weight: 800; border-radius: 12px; cursor: pointer;
+  background: var(--blanco);
+  color: var(--azul);
+  border: 2px solid var(--azul); /* contorno */
+  box-shadow: 0 4px 12px rgba(3, 169, 244, 0.18);
+  transition: background .18s ease, color .18s ease, transform .08s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.btn:hover { background: #eef6ff; box-shadow: 0 6px 16px rgba(3, 169, 244, 0.25); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 0; box-shadow: 0 0 0 3px rgba(79,195,247,.35); }
+
+/* Variante llena (por si la quieres usar) */
+.btn--fill { background: linear-gradient(180deg, var(--celeste), #7bd3ff); color: #083b86; border-color: #0b53c7; }
+.btn--fill:hover { filter: brightness(.98); }
+
+/* ===== Footer ===== */
+.site-footer { border-top: 1px solid #e2ebf5; padding: 18px 0 28px; text-align: center; color: #4d6b8a; }
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  :root { --header-h: 64px; }
+  .game-card { padding: 16px; }
+}
+

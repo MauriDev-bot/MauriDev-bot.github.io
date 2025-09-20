@@ -1,13 +1,11 @@
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
 
-
 if (menuToggle && sidebar) {
 menuToggle.addEventListener('click', () => {
 const isOpen = sidebar.classList.toggle('open');
 menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
-
 
 sidebar.addEventListener('click', (e) => {
 if (e.target.matches('a') && sidebar.classList.contains('open')) {
@@ -16,7 +14,6 @@ menuToggle.setAttribute('aria-expanded', 'false');
 }
 });
 }
-
 
 const setActiveLink = () => {
 const hash = window.location.hash || '#sobre-mi';

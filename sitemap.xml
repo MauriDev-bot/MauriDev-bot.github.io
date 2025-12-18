@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://mauri-dev.com/</loc>
+  </url>
+
+  <url>
+    <loc>https://mauri-dev.com/quizzes.html</loc>
+  </url>
+
+  <url>
+    <loc>https://mauri-dev.com/quizzes/historia.html</loc>
+  </url>
+
+  <url>
+    <loc>https://mauri-dev.com/quizzes/ciencia.html</loc>
+  </url>
+
+  <url>
+    <loc>https://mauri-dev.com/quizzes/programacion.html</loc>
+  </url>
+
+</urlset>

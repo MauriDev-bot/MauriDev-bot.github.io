@@ -1,0 +1,30 @@
+{
+  "title": "Programación Básica – Nivel Inicial",
+  "questions": [
+    {
+      "question": "¿Qué es un algoritmo?",
+      "options": ["Un lenguaje de programación", "Un conjunto de pasos para resolver un problema", "Un programa", "Un computador"],
+      "answer": 1
+    },
+    {
+      "question": "¿Para qué sirve una variable en programación?",
+      "options": ["Para ejecutar programas", "Para guardar información", "Para diseñar páginas web", "Para compilar código"],
+      "answer": 1
+    },
+    {
+      "question": "¿Cuál de estos es un lenguaje de programación?",
+      "options": ["HTML", "CSS", "Python", "HTTP"],
+      "answer": 2
+    },
+    {
+      "question": "¿Qué estructura se usa para repetir acciones?",
+      "options": ["Condición", "Función", "Bucle", "Variable"],
+      "answer": 2
+    },
+    {
+      "question": "¿Qué significa 'debuggear'?",
+      "options": ["Crear un programa", "Optimizar código", "Corregir errores", "Publicar un sitio web"],
+      "answer": 2
+    }
+  ]
+}

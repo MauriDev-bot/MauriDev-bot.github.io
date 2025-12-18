@@ -1,0 +1,30 @@
+{
+  "title": "Historia Universal – Nivel Básico",
+  "questions": [
+    {
+      "question": "¿En qué continente se originó la civilización egipcia?",
+      "options": ["Asia", "Europa", "África", "América"],
+      "answer": 2
+    },
+    {
+      "question": "¿Qué imperio construyó el Coliseo de Roma?",
+      "options": ["Griego", "Romano", "Egipcio", "Persa"],
+      "answer": 1
+    },
+    {
+      "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
+      "options": ["1914", "1939", "1945", "1929"],
+      "answer": 1
+    },
+    {
+      "question": "¿Quién fue Sócrates?",
+      "options": ["Un emperador romano", "Un filósofo griego", "Un general macedonio", "Un rey egipcio"],
+      "answer": 1
+    },
+    {
+      "question": "¿Qué acontecimiento marcó el inicio de la Edad Moderna?",
+      "options": ["La caída del Imperio Romano", "El descubrimiento de América", "La Revolución Francesa", "La Primera Guerra Mundial"],
+      "answer": 1
+    }
+  ]
+}

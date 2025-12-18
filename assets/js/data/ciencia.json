@@ -1,0 +1,30 @@
+{
+  "title": "Ciencia y Tecnología – Nivel Básico",
+  "questions": [
+    {
+      "question": "¿Cuál es el planeta más cercano al Sol?",
+      "options": ["Venus", "Marte", "Mercurio", "Júpiter"],
+      "answer": 2
+    },
+    {
+      "question": "¿Qué gas es esencial para la respiración humana?",
+      "options": ["Nitrógeno", "Oxígeno", "Dióxido de carbono", "Hidrógeno"],
+      "answer": 1
+    },
+    {
+      "question": "¿Cuál es la unidad básica de la vida?",
+      "options": ["Átomo", "Molécula", "Célula", "Tejido"],
+      "answer": 2
+    },
+    {
+      "question": "¿Qué científico propuso la teoría de la relatividad?",
+      "options": ["Isaac Newton", "Nikola Tesla", "Albert Einstein", "Galileo Galilei"],
+      "answer": 2
+    },
+    {
+      "question": "¿Qué tecnología permite conectarse a internet sin cables?",
+      "options": ["Bluetooth", "Wi-Fi", "GPS", "NFC"],
+      "answer": 1
+    }
+  ]
+}

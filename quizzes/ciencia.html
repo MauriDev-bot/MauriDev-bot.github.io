@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de Ciencia | Mauri-Dev</title>
+  <meta name="description" content="Quiz cultural de ciencia y tecnología para aprender jugando." />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>🔬 Quiz de Ciencia</h1>
+    <p>Ciencia y tecnología – nivel básico</p>
+  </header>
+
+  <nav class="nav">
+    <a href="/mauri-dev/index.html">Inicio</a>
+    <a href="/mauri-dev/quizzes.html">Quizzes</a>
+    <a href="/mauri-dev/juegos.html">Juegos</a>
+    <a href="/mauri-dev/about.html">Sobre el proyecto</a>
+    <a href="/mauri-dev/contacto.html">Contacto</a>
+  </nav>
+
+  <main class="container">
+    <div id="quiz-container">
+        <div id="quiz-ui">
+  <div id="progress">
+    <div id="progress-bar"></div>
+  </div>
+
+  <div id="score">Puntaje: 0</div>
+
+  <div id="quiz-container"></div>
+</div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Mauri-Dev</p>
+    <nav>
+      <a href="/legal/privacidad.html">Privacidad</a> ·
+      <a href="/legal/cookies.html">Cookies</a> ·
+      <a href="/legal/aviso-legal.html">Aviso legal</a>
+    </nav>
+  </footer>
+
+  <script src="/assets/js/quiz-engine.js"></script>
+  <script>
+    const quiz = new QuizEngine({
+      containerId: 'quiz-container',
+      dataUrl: '/assets/js/data/ciencia.json'
+    });
+    quiz.init();
+  </script>
+
+</body>
+</html>

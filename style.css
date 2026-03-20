@@ -1,0 +1,91 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1, h2 { text-align: center; color: #1a73e8; }
+
+/* Formularios */
+input[type="text"], input[type="password"], input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover { background-color: #1557b0; }
+
+/* Lista de archivos */
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.actions a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.download { color: #1a73e8; background: #e8f0fe; }
+.delete { color: #d93025; background: #fce8e6; }
+
+/* Header del panel */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f2f5;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    font-size: 0.8rem;
+    color: #666;
+    text-decoration: none;
+}
